@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -153,13 +153,59 @@ font-weight: 500px;
 margin:5px;
 colour:grey;
 }
+.signup form p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size:12px;
+    margin:5px;
+    color:grey;
+}
 .signup form hr{
     border:1px solid rgb(223, 223, 223);
     margin:15px 0px;
 }
+.signup form input{
+    font-size:15px;
+    padding: 10px 10px;
+    background-color: #f0f2f5;
+    border:1px solid rgb(223, 223, 223);
+    border-radius:5px;
+    margin:5px;
+}
+.signup form input:focus{
+    outline:none;
+    border:1px solid #1877f2;
 
+}
+.firstname-surname input{
+    width:100%;
+}
 
-
+.signup form #signup-btn{
+    display:block;
+    margin:auto;
+    background-color:#42b72a;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    font-weight:550;
+    padding: 10px;
+    width:200px;
+}
+.signup-close-btn{
+    position:absolute;
+    height:50px;
+width:50px;
+right:10px;
+top:10px;
+font-size:40px;
+font-weight:500;
+border:none;
+background-color:white;
+color:gray;
+font-family:Arial, Helvetica, sans-serif;
+}
 
     </style>
     <body>
@@ -174,7 +220,7 @@ colour:grey;
                     <div class="form-box">
                     <form action="#" method="post">
                         </form>
-                        <a href="#"> forgotten password</a>
+                        <a href="/facebook_-main/forpassword.html"> forgotten password</a>
                     <hr>
                     <button id="new-account-btn">
                         create new account
@@ -191,7 +237,7 @@ colour:grey;
                     </form>
                         <input type="text" name="usermail-phone"placeholder="email address or phone number">
                         <input type="password" name="userpassword" palceholder="password"
-                        <input type="submit" value="log in" id=""
+                        <input type="submit" value="log in" id="">
                     </form>
                 </div>
             <img src="images/facebook-logo-png-9010.png" alt=""
@@ -265,7 +311,20 @@ colour:grey;
 
                 </div>
             </form>
+            <button id="signup-close-btn" onclick="signup_close_btn()">x</button>
         </div>
         <!-- <script src="" async defer></script> -->
     </body>
+    <script>
+        function createnew_btn(){
+            document.getElementById('signup').style.display="flex";
+            document.getElementById('main-container').style.filter="blur(8px)";
+            document.getElementById('footer').style.filter="blur(8px)";
+        }
+        function signup_close_btn(){
+            document.getElementById('signup').style.display="none";
+            document.getElementById('signup').style.filter="blur(0px)";
+            document.getElementById('signup').style.filter="blur(0px)";
+        }
+    </script>
 </html>
